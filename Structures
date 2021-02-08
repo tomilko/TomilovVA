@@ -1,0 +1,95 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Film {
+	string name;
+	string director;
+	int	date;
+	int price;
+};
+
+int main()
+{
+system("color F0");
+system("chcp 1251>nul");
+Film a[100];
+Film b[100];
+int N;
+cout << "Введите количество фильмов в списке - ";
+while (!(cin >> N) || (cin.peek() != '\n') || N <= 0)
+{
+	cin.clear();
+	system("cls");
+	while (cin.get() != '\n');
+	{
+		cout << "Введите количество фильмов в списке - ";
+	}
+}
+system("cls");
+for (int i = 0; i < N; i++)
+{
+	cout << "Название: " << endl; cin.ignore(); getline(cin, a[i].name);
+	cout << "Режиссёр: " << endl; getline(cin, a[i].director);
+	cout << "Год выпуска: " << endl;
+	while (!(cin >> a[i].date) || (cin.peek() != '\n') || a[i].date <= 0)
+	{
+		cin.clear();
+		system("cls");
+		while (cin.get() != '\n');
+		{
+			cout << "Название: " << endl << a[i].name << endl << "Режиссёр: " << endl << a[i].director << endl << "Год выпуска: " << endl;
+		}
+	}
+	cout << "Стоимость: " << endl;
+	while (!(cin >> a[i].price) || (cin.peek() != '\n') || a[i].price <= 0)
+	{
+		cin.clear();
+		system("cls");
+		while (cin.get() != '\n');
+		{
+			cout << endl << "Название: " << endl << a[i].name << endl << "Режиссёр: " << endl << a[i].director << endl << "Год выпуска: " << endl << a[i].date << endl << "Стоимость: " << endl;
+		}
+	}
+	system("cls");
+}
+int p;
+cout << "Введите искомую стоимость фильма - ";
+while (!(cin >> p) || (cin.peek() != '\n') || p <= 0)
+{
+	cin.clear();
+	system("cls");
+	while (cin.get() != '\n');
+	{
+		cout << "Введите искомую стоимость фильма - ";
+	}
+}
+int j = 1;
+for (int i = 0; i < N; i++)
+{
+	if (a[i].price <= p)
+	{
+		b[j].name = a[i].name;
+		b[j].director = a[i].director;
+		b[j].date = a[i].date;
+		b[j].price = a[i].price;
+		j++;
+	}
+}
+system("cls");
+N = j;
+cout << "Введите данные фильма, который хотите добавить:";
+cout << endl << "Название: " << endl; cin.ignore(); getline(cin, b[0].name);
+cout << "Режиссёр: " << endl; getline(cin, b[0].director);
+cout << "Год выпуска: " << endl; cin >> b[0].date;
+cout << "Стоимость: " << endl; cin >> b[0].price;
+system("cls");
+for (int i = 0; i < N; i++)
+{
+	cout << endl << i + 1 << ". " << '\t' << b[i].name << endl;
+	cout << '\t' << b[i].director << endl;
+	cout << '\t' << b[i].date << endl;
+	cout << '\t' << b[i].price << endl;
+}
+return 0;
+}
