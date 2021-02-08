@@ -1,2 +1,0 @@
-# TomilovVA
-PSTU/PolyakovaOA
