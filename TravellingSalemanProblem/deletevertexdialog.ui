@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DeleteVertexDialog</class>
+ <widget class="QDialog" name="DeleteVertexDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>253</width>
+    <height>129</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Выберите номер вершины</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+background-color: qlineargradient( x1:0 y1:0, x2:1 y2:0, stop:0 #87F8FE, stop:1 #67A9FF);
+}
+
+QPushButton {
+background-color: #7EDFFF;
+border: 2px solid #71BFFF;
+border-radius: 4px;
+
+padding: 6px;
+margin-bottom: 4px;
+}
+
+QLabel, QPushButton, QLineEdit {
+font-size: 16px;
+font-family: &quot;segoe ui semibold&quot;;
+color: darkblue;
+border-radius: 4px;
+}
+
+QLabel {
+margin-bottom: 4px;
+}
+
+QLineEdit {
+background-color: #D6E7FF;
+border: 2px solid #71BFFF;
+padding: 4px;
+}
+
+
+
+QPushButton:hover, QLineEdit:hover {
+border: 3px solid #558FCC;
+font-size: 17px;
+border-radius: 8px;
+}
+
+QPushButton:hover { background-color: #84F4FF; }</string>
+  </property>
+  <widget class="QLineEdit" name="DelitableVertexIndexLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>20</y>
+     <width>61</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>151</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Номер вершины</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ApplySettingsPushButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>70</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Ок</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="CancelPushButton">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>70</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Отмена</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
