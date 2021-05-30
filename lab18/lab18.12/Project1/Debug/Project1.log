@@ -1,0 +1,5 @@
+﻿  MAIN.cpp
+C:\Users\kna-0\OneDrive\Рабочий стол\УЧЁБА\ПОЛЯКОВА\ЛАБА 18.12\Project1\Project1\CLASS.h(14,19): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+C:\Users\kna-0\OneDrive\Рабочий стол\УЧЁБА\ПОЛЯКОВА\ЛАБА 18.12\Project1\Project1\MAIN.cpp(91,30): warning C4101: index: неиспользованная локальная переменная
+C:\Users\kna-0\OneDrive\Рабочий стол\УЧЁБА\ПОЛЯКОВА\ЛАБА 18.12\Project1\Project1\MAIN.cpp(192,9): warning C4101: in: неиспользованная локальная переменная
+  Project1.vcxproj -> C:\Users\kna-0\OneDrive\Рабочий стол\УЧЁБА\ПОЛЯКОВА\ЛАБА 18.12\Project1\Debug\Project1.exe
