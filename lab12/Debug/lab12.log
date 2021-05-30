@@ -1,0 +1,4 @@
+﻿  lab12.cpp
+C:\Users\Влад\Desktop\c++(2)\lab12\lab12.cpp(110,54): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+C:\Users\Влад\Desktop\c++(2)\lab12\lab12.cpp(119,61): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+  lab12.vcxproj -> C:\Users\Влад\Desktop\c++(2)\lab12\Debug\lab12.exe
