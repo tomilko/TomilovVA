@@ -1,0 +1,7 @@
+﻿  18_11_3.cpp
+C:\Users\Влад\Downloads\18.11.3\18_11_3.cpp(7,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+C:\Users\Влад\Downloads\18.11.3\list.h(134,39): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+C:\Users\Влад\Downloads\18.11.3\list.h(130): message : во время компиляции функции-члена класс шаблон "void List<Pair>::addmm(double,double)"
+C:\Users\Влад\Downloads\18.11.3\18_11_3.cpp(19): message : выполняется компиляция ссылки на экземпляр шаблон функции "void List<Pair>::addmm(double,double)"
+C:\Users\Влад\Downloads\18.11.3\18_11_3.cpp(9): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "List<Pair>"
+  lab18.11.3.vcxproj -> C:\Users\Влад\Desktop\c++(2)\lab18.11.3\Debug\lab18.11.3.exe
