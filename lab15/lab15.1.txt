@@ -1,0 +1,72 @@
+#include <iostream>
+
+
+using namespace std;
+
+struct Schedule
+{
+	int num;
+	string start, final;
+};
+
+void ShellSort(Schedule* schedule, int size)
+{
+	int j, temp_1; string temp_2, temp_3;
+	for (int step = size / 2; step > 0; step /= 2)
+	{
+		for (int i = step; i < size; i++)
+		{
+			temp_1 = schedule[i].num;
+			temp_2 = schedule[i].start;
+			temp_3 = schedule[i].final;
+			for (j = i; j >= step; j -= step)
+			{
+				if (temp_1 < schedule[j - step].num)
+				{
+					schedule[i].num = schedule[j - step].num;
+					schedule[i].start = schedule[j - step].start;
+					schedule[i].final = schedule[j - step].final;
+				}
+				else
+				{
+					break;
+				}
+			}
+		}
+		schedule[j].num = temp_1;
+		schedule[j].start = temp_2;
+		schedule[j].final = temp_3;
+	}
+}
+
+int main()
+{
+	system("chcp 1251 > nul");
+	int size = 0;
+	while (size <= 0)
+	{
+		cout << "Введите количество поездов в расписании: ";
+		cin >> size;
+	}
+	Schedule *schedule = new Schedule[size];
+	system("cls");
+	for (int i = 0; i < size; i++)
+	{
+		cout << "Введите номер маршрута: ";
+		cin >> schedule[i].num;
+		cout << endl << "Введите город отправления: ";
+		cin >> schedule[i].start;
+		cout << endl << "Введите город следования: ";
+		cin >> schedule[i].final;
+		system("cls");
+	}
+	ShellSort(schedule, size);
+	for (int i = 0; i < size; i++)
+	{
+		cout << "Номер маршрута: " << schedule[i].num;
+		cout << endl << "Город отправления: " << schedule[i].start;
+		cout << endl << "Город следования: " << schedule[i].final;
+		cout << endl << endl;
+	}
+	return 0;
+}

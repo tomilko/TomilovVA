@@ -1,0 +1,4 @@
+﻿  lab15.2.cpp
+C:\Users\Влад\Desktop\c++(2)\lab15.2\lab15.2.cpp(92,12): warning C4101: i: неиспользованная локальная переменная
+C:\Users\Влад\Desktop\c++(2)\lab15.2\lab15.2.cpp(92,15): warning C4101: num: неиспользованная локальная переменная
+  lab15.2.vcxproj -> C:\Users\Влад\Desktop\c++(2)\lab15.2\Debug\lab15.2.exe
