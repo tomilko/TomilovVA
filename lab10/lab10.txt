@@ -1,0 +1,83 @@
+#include <iostream>
+#include <cstring>
+#include <Windows.h>
+
+using namespace std;
+
+void Vvod (string* arr, unsigned long long size, int& maxstr)
+{
+	char s[63];
+	int max = 0;
+	cout << "Заполните массив строками не больше 64 символов" << endl;;
+	for (int i = 0; i < size; i++)
+	{
+		cin >> s;
+		if (strlen(s) > max)
+		{
+			max= strlen(s);
+			maxstr = i;
+		}
+		arr[i] = s;
+	}
+}
+
+void Vivod (string* arr, unsigned long long size) 
+{
+	for (int i = 0; i < size; i++)
+	{
+		cout << i+1 << ".\t" << arr[i] << endl;
+	}
+	cout << " " << endl;
+}
+
+void MoveArr(string*& arr, unsigned long long& size, int maxstr)
+{
+	for (int i = maxstr + 1; i < size; i++)
+	{
+		arr[i - 1] = arr[i];
+	}
+	size--;
+}
+
+void CopyArr(string*& arr, unsigned long long size)
+{
+	string* newarr = new string[size];
+	for (int i = 0; i < size; i++) 
+	{
+		newarr[i] = arr[i];
+	}
+	delete[] arr;
+	arr = newarr;
+}
+
+int main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	int maxstr;
+	unsigned long long size;
+	cout << "Введите количество строк - ";
+	while (!(cin >> size) || (cin.peek() != '\n') || size <= 0)
+	{
+		cin.clear();
+		system("cls");
+		while (cin.get() != '\n');
+		{
+			cout << "Введите количество строк - ";
+		}
+	}
+	system("cls");
+	string* arr = new string[size];
+	if (arr == NULL)
+	{
+		cout << "Недостаточно свободной памяти!" << endl;
+		exit(1); 
+	}
+	Vvod (arr, size, maxstr);
+	system("cls");
+	MoveArr(arr, size, maxstr);
+	CopyArr(arr, size);
+	Vivod (arr, size);
+	delete[] arr;
+	return 0;
+}
